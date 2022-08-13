@@ -1,0 +1,10 @@
+.links{
+    display: none;
+}
+.links:hover{
+    display: block;
+}
+
+.settings:hover + .links{
+    display: block;
+}

@@ -1,6 +1,6 @@
 <header class="h-[70px] border px-10 shadow-lg flex items-center">
     <nav class="flex justify-between w-full">
-        <h1>
+        <h1 class="font-extrabold text-xl">
             <a routerLink="/">
                 Shopping List App
             </a>
@@ -11,13 +11,15 @@
                 <a href="">Add Item</a>
             </li>
 
-            <li>
-                <select name="" id="">
-                    <option value="">Settings</option>
-                    <option value="">
-                        <a href="">Create a Category</a>
-                    </option>
-                </select>
+            <li class="relative">
+                <label for="" class="settings">Settings</label>
+                <div class="links absolute border top-6 bg-white p-3 shadow-md w-[200px] right-0">
+                    <ul>
+                        <li class="text-center">
+                            <a href="">Create A Category</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </nav>
