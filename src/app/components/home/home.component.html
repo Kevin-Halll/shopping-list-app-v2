@@ -1,1 +1,10 @@
-<p>home works!</p>
+<section class="max-w-[70%] m-auto">
+    <div class="grid grid-cols-3 gap-10 pt-10 ">
+        <div class="border shadow-md " *ngFor="let group of groups; let i = index">
+            <a href="/category/{{group._id}}" class="flex justify-between p-5">
+                <h1 class="font-bold">{{group.category_name}}</h1>
+                <small>{{ counts[i] }} items</small>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<section class="pt-10">
+    <div class="w-[50%] m-auto">
+        <div class="flex text-center shadow-md font-bold border-b-2 border-b-black">
+            <h1 class="border p-3 w-full">Item Name</h1>
+            <h1 class="border p-3 w-full">Quantity</h1>
+            <h1 class="border p-3 w-full">Price</h1>
+            <h1 class="border p-3 w-full">Actions</h1>
+        </div>
+
+        <div *ngFor="let item of items" class="flex text-center shadow-md border my-2">
+            <h1 class="p-3 w-full">{{item.item_name}}</h1>
+            <h1 class="p-3 w-full">{{item.quantity}}</h1>
+            <h1 class="p-3 w-full">{{item.price}}</h1>
+
+            <h1 class="w-full flex justify-center">
+                <a href="/edit-item/{{item._id}}" title="Edit" class="bg-green-400 flex justify-center items-center w-full">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <a href="/delete-item/{{item._id}}" title="Delete" class="bg-red-400 flex justify-center items-center w-full">
+                        <i class="fa-solid fa-trash-can"></i>
+                </a>
+            </h1>
+        </div>
+        
+    </div>
+</section>
