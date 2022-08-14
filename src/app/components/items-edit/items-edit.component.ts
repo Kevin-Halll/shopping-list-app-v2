@@ -47,7 +47,6 @@ export class ItemsEditComponent implements OnInit {
 
 
   onSubmit() {
-
     console.log(this.addList?.value);
     this.itemsService.updateItem(this.urlRoute.snapshot.params['_id'],this.addList?.value).subscribe();
     alert("Successful");

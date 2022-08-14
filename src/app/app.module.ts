@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { ItemsEditComponent } from './components/items-edit/items-edit.component';
 import { ItemsAddComponent } from './components/items-add/items-add.component';
+import { ItemsGroupedComponent } from './components/items-grouped/items-grouped.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ItemsAddComponent } from './components/items-add/items-add.component';
     HomeComponent,
     ItemsListComponent,
     ItemsEditComponent,
-    ItemsAddComponent
+    ItemsAddComponent,
+    ItemsGroupedComponent
   ],
   imports: [
     BrowserModule,
