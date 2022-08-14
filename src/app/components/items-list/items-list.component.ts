@@ -12,8 +12,22 @@ export class ItemsListComponent implements OnInit {
   constructor(private itemService: ShoppingListService) { }
 
   ngOnInit(): void {
+    this.getAllItems()
+  }
+  getAllItems(){
     this.itemService.getAllItems().subscribe(results => {
       this.items = results.data
+    })
+  }
+
+  removeItem(id:string){
+    this.itemService.deleteItem(id).subscribe({
+      next:(res) => {
+        this.getAllItems()
+      },
+      error: (err) => {
+        alert(`Error removing item`)
+      }
     })
   }
 
