@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateGroupComponent } from './components/create-group/create-group.component';
+import { GroupListComponent } from './components/group-list/group-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { ItemsAddComponent } from './components/items-add/items-add.component';
 import { ItemsEditComponent } from './components/items-edit/items-edit.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "edit-item/:_id", component: ItemsEditComponent},
   {path: ":category/:_id", component: ItemsGroupedComponent},
   {path: "add-group", component: CreateGroupComponent},
+  {path: "all-groups", component: GroupListComponent},
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 .links{
     display: none;
+    padding: 1rem;
 }
 .links:hover{
     display: block;

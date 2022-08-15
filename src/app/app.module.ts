@@ -12,6 +12,8 @@ import { ItemsEditComponent } from './components/items-edit/items-edit.component
 import { ItemsAddComponent } from './components/items-add/items-add.component';
 import { ItemsGroupedComponent } from './components/items-grouped/items-grouped.component';
 import { CreateGroupComponent } from './components/create-group/create-group.component';
+import { GroupListComponent } from './components/group-list/group-list.component';
+import { GroupEditComponent } from './components/group-edit/group-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CreateGroupComponent } from './components/create-group/create-group.com
     ItemsEditComponent,
     ItemsAddComponent,
     ItemsGroupedComponent,
-    CreateGroupComponent
+    CreateGroupComponent,
+    GroupListComponent,
+    GroupEditComponent
   ],
   imports: [
     BrowserModule,
