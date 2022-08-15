@@ -1,0 +1,15 @@
+<section class="pt-10">
+    <h1 class="text-center font-bold text-4xl pb-3 text-cyan-500">Add New Category</h1>
+    <div class="w-[30%] m-auto">
+        <form [formGroup]="createGroup" (submit)="onSubmit()">
+            <div class="flex border p-3 shadow-md my-2">
+                <label for="" class="w-[40%] font-medium">Category Name:</label>
+                <input type="text" name="item_name" formControlName="category_name" class="outline-none border-b w-full">
+            </div>
+
+            <div class="text-end">
+                <button type="submit" class=" p-3 shadow-md my-2 text-white bg-cyan-500">Add Category</button>
+            </div>
+        </form>
+    </div>
+</section>

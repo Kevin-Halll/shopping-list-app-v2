@@ -9,7 +9,10 @@ import { Category, Items } from 'src/interfaces/interfaces';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  groups: Category[] = [];
+  groups: Category[] = [{
+    _id: "62f97e5316d78812dbd16b46",
+    category_name: "New Home",
+  }];
   items: Items[] = [];
   counts: number[] = []
 
@@ -19,8 +22,10 @@ export class HomeComponent implements OnInit {
     // this.getCategories();
     // this.getItems();
 
+    
     this.categoryService.getAllGroups().subscribe(results => {
       this.groups = results.data;
+      console.log(this.groups);
 
       this.itemsService.getAllItems().subscribe(results => {
         console.log(results.data);

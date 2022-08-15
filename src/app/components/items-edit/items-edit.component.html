@@ -1,5 +1,5 @@
 <section class="pt-10">
-    <h1 class="text-center font-bold text-4xl pb-3 text-cyan-500">Add New Item</h1>
+    <h1 class="text-center font-bold text-4xl pb-3 text-cyan-500">Edit This Item</h1>
     <div class="w-[50%] m-auto">
         <form (submit)="onSubmit()"  action="" class="w-[50%] m-auto" [formGroup]="addList">
             <div class="flex border p-3 shadow-md my-2">
@@ -9,7 +9,7 @@
 
             <div class="flex border p-3 shadow-md my-2">
                 <label for="" class="w-[35%] font-medium">Category:</label>
-                <select name="category" id="category" formControlName="category" class="outline-none border-b w-full text-center">
+                <select name="category" id="category" formControlName="category" class="outline-none border-b w-full">
                     <option value="" hidden>--Select Category--</option>
                     <option *ngFor="let group of categories" value="{{group.category_name}}"
                     >
@@ -29,7 +29,7 @@
             </div>
 
             <div class="text-end">
-                <button type="submit" class=" p-3 shadow-md my-2 text-white bg-cyan-500">Add Item</button>
+                <button type="submit" class=" p-3 shadow-md my-2 text-white bg-cyan-500">Edit Item</button>
             </div>
         </form>
     </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { ShoppingListService } from 'src/app/services/shopping-list.service';
@@ -12,18 +12,23 @@ import { Category } from 'src/interfaces/interfaces';
 })
 export class ItemsAddComponent implements OnInit {
 
-  addList:any;
+  addList = new FormGroup({
+    item_name: new FormControl(),
+    category: new FormControl(),
+    price: new FormControl(),
+    quantity: new FormControl(),
+  })
   categories:Category[] = [];
 
   constructor( private groupService: CategoriesService, private itemsService: ShoppingListService,
     private fb:FormBuilder,
     private routes:Router,) {
-      this.addList = fb.group ({
-        item_name:['' ],
-        category:[''],
-        price:[],
-        quantity:[]
-      })
+      // this.addList = fb.group ({
+      //   item_name:['' ],
+      //   category:[''],
+      //   price:[],
+      //   quantity:[]
+      // })
 
     }
 

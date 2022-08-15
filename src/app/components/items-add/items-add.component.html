@@ -9,8 +9,12 @@
 
             <div class="flex border p-3 shadow-md my-2">
                 <label for="" class="w-[35%] font-medium">Category:</label>
-                <select name="category" id="category" class="outline-none border-b w-full text-center">
+                <select name="category" id="category" class="outline-none border-b w-full text-center" formControlName="category">
                     <option value="" hidden>--Select Category--</option>
+                    <!-- <option value="Vegetables" >Vegetables</option>
+                    <option value="Fruits" >Fruits</option>
+                    <option value="Staples" >Stables</option>
+                    <option value="Meats" >Meats</option> -->
                     <option *ngFor="let group of categories" value="{{group.category_name}}">
                         {{group.category_name}}
                       </option>
@@ -19,12 +23,12 @@
 
             <div class="flex border p-3 shadow-md my-2">
                 <label for="" class="w-[35%] font-medium">Price:</label>
-                <input type="number" name="price" formControlName="item_name" class="outline-none border-b w-full">
+                <input type="number" name="price" formControlName="price" class="outline-none border-b w-full">
             </div>
 
             <div class="flex border p-3 shadow-md my-2">
                 <label for="" class="w-[35%] font-medium">Quantity:</label>
-                <input type="number" name="quantity" formControlName="item_name" class="outline-none border-b w-full">
+                <input type="number" name="quantity" formControlName="quantity" class="outline-none border-b w-full">
             </div>
 
             <div class="text-end">
