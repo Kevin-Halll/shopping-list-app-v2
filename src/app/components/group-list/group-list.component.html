@@ -1,16 +1,16 @@
 <section class="pt-10">
-    <h1 class="text-center font-bold text-4xl pb-4 text-cyan-500">All Items</h1>
-    <div class="w-[50%] m-auto">
+    <h1 class="text-center font-bold text-4xl pb-4 text-cyan-500">All Categories</h1>
+    <div class="w-[30%] m-auto">
         <div class="flex text-center shadow-md font-bold border-b-2 border-b-black">
             <h1 class="border p-3 w-full">Category Name</h1>
-            <h1 class="border p-3 w-full">Actions</h1>
+            <h1 class="border p-3 w-[30%]">Actions</h1>
         </div>
 
         <div *ngFor="let group of groups" class="flex text-center shadow-md border my-2">
             <h1 class="p-3 w-full">{{group.category_name}}</h1>
-            <h1 class="w-full flex justify-center">
-                <a routerLink="/edit-group/{{group._id}}" title="Edit" class="bg-green-400 flex justify-center items-center w-full">
-                        <i class="fa-solid fa-pen-to-square"></i>
+            <h1 class="w-[30%] flex justify-center">
+                <a routerLink="/category/edit-group/{{group._id}}" title="Edit" class="bg-green-400 flex justify-center items-center w-full">
+                    <i class="fa-solid fa-pen-to-square"></i>
                 </a>
                 <div title="Delete" 
                 (click)="removeGroup(group._id)"
