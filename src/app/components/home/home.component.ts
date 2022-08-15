@@ -19,9 +19,6 @@ export class HomeComponent implements OnInit {
   constructor(private categoryService: CategoriesService, private itemsService: ShoppingListService) { }
 
   ngOnInit(): void {
-    // this.getCategories();
-    // this.getItems();
-
     
     this.categoryService.getAllGroups().subscribe(results => {
       this.groups = results.data;
@@ -33,25 +30,9 @@ export class HomeComponent implements OnInit {
 
         this.groups.forEach(group => {
           this.counts.push(this.items.filter((item: Items) => item.category == group.category_name).length)
-          // console.log(
-          //   this.items.filter((item: Items) => item.category == group.category_name)
-          // )
         });
       }) 
     })    
   }
-
-  // getCategories() {
-  //   this.categoryService.getAllGroups().subscribe(results => {
-  //   this.groups = results.data;
-  //  }) 
-  // }
-  // getItems() {
-  //   this.itemsService.getAllItems().subscribe(results => {
-  //     console.log(results.data);
-      
-  //   this.items = results.data;
-  //  }) 
-  // }
 
 }

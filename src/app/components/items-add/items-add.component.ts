@@ -22,15 +22,7 @@ export class ItemsAddComponent implements OnInit {
 
   constructor( private groupService: CategoriesService, private itemsService: ShoppingListService,
     private fb:FormBuilder,
-    private routes:Router,) {
-      // this.addList = fb.group ({
-      //   item_name:['' ],
-      //   category:[''],
-      //   price:[],
-      //   quantity:[]
-      // })
-
-    }
+    private routes:Router,) {}
 
   ngOnInit(): void {
     this.groupService.getAllGroups().subscribe(results => {
