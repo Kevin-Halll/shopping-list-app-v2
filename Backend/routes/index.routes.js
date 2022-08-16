@@ -18,8 +18,8 @@ const {
 
 router.route('/').get(IndexController.index)
 
+// Item Route
 router.route('/shopping_list').post(createItem).get(getAllItems)
-
 router.route('/shopping_list/:id').delete(deleteItemsById).get(getItemsById).patch(updateItem)
 
 // categories route

@@ -24,9 +24,8 @@ export class ItemsEditComponent implements OnInit {
 
 
   constructor( private groupService: CategoriesService, private itemsService: ShoppingListService,
-    private routes:Router, private urlRoute: ActivatedRoute, //*public addList:FormGroup/
-    ) {}
-
+    private routes:Router, private urlRoute: ActivatedRoute) {}
+    
   ngOnInit(): void {
     this.groupService.getAllGroups().subscribe(results => {
       this.categories = results.data
